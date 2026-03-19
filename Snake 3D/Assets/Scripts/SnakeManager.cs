@@ -87,6 +87,7 @@ public class SnakeManager : MonoBehaviour
         }
 
         stepHappened = true;
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.walk);
     }
 
     public void Grow()

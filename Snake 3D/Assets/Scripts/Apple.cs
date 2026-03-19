@@ -10,6 +10,7 @@ public class Apple : MonoBehaviour
             Respawn();
             Destroy(gameObject);
             SnakeManager.Instance.Grow();
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.apple);
         }
     }
 
