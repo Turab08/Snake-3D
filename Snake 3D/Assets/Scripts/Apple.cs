@@ -2,16 +2,24 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
+    public int value;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Respawn();
-            Destroy(gameObject);
-            SnakeManager.Instance.Grow();
-            AudioManager.Instance.PlaySFX(AudioManager.Instance.apple);
+            CollectApple();
         }
+    }
+
+
+    void CollectApple()
+    {
+        Destroy(gameObject);
+        SnakeManager.Instance.Grow();
+        Score.Instance.AddScore(value);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.apple);
     }
 
     void Respawn()

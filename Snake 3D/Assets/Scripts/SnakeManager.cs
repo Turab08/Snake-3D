@@ -105,8 +105,9 @@ public class SnakeManager : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("SnakeBody")) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("SnakeBody"))
+        {
+            GameManager.Instance.SetState(GameManager.GameState.GameOver);
         }
     }
 }

@@ -221,7 +221,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.8, y: 0.8, z: 0.8}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &3978399614698351867
 Animator:
@@ -256,3 +256,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1481a92045295ca4f927f1448eeb32b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 100
